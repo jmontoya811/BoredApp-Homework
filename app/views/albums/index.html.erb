@@ -1,0 +1,24 @@
+<h1>Albums</h1>
+
+<table>
+    <thread>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Photographs</th>
+    <th>Extra Content</th>
+    </thread>
+
+
+    <tbody>
+        <% @albums.each do |album| %>
+        <tr>
+
+            <td><%= album.title %></td>
+            <td><%= album.body %></td>
+          <br>  <hr>
+            </tr>
+        <% end %>
+    </tbody>
+<td>Music for the soul</td>
+        
+</table>
