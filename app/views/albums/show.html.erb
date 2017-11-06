@@ -1,0 +1,7 @@
+<h2>Showpage</h2>
+<%= @album_item.inspect%>
+<p><%= link_to @album_item.title, album_path(@album_item.id) %></p>
+<h1><%= @album_item.title %></h1>
+
+<p><%= @album_item.body %></p>
+<%= link_to 'Edit', edit_album_path(@album_item) %>

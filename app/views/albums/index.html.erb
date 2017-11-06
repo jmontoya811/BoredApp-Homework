@@ -12,13 +12,17 @@
     <tbody>
         <% @albums.each do |album| %>
         <tr>
-
             <td><%= album.title %></td>
-            <td><%= album.body %></td>
-          <br>  <hr>
+            <td><%= album.body %></td>    
+            <td><%= link_to 'Edit', edit_album_path(album) %></td>
+            <td><%= link_to 'Show', album %></td>
+            <td><%= link_to 'Delete Item', album_path(album), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
             </tr>
         <% end %>
     </tbody>
 <td>Music for the soul</td>
         
 </table>
+
+<%= link_to 'New Album', new_album_path %>

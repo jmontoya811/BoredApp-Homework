@@ -1,16 +1,2 @@
 <h2>Create your Album</h2>
-<%= form_for(@album_item) do |f| %>
-<div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render 'form', album: @album %>
