@@ -14,9 +14,9 @@
         <tr>
             <td><%= album.title %></td>
             <td><%= album.body %></td>    
-            <td><%= link_to 'Edit', edit_album_path(album) %></td>
+            <td><%= link_to 'Edit', edit_album_path(album)if logged_in?(:site_admin) %></td>
             <td><%= link_to 'Show', album %></td>
-            <td><%= link_to 'Delete Item', album_path(album), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Delete Item', album_path(album), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
 
             </tr>
         <% end %>
@@ -25,4 +25,4 @@
         
 </table>
 
-<%= link_to 'New Album', new_album_path %>
+<%= link_to 'New Album', new_album_path if logged_in?(:site_admin) %>
